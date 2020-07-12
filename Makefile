@@ -13,17 +13,8 @@ build:
 fmt:
 	go fmt github.com/teintuc/chromecast-cli/...
 
-vendor:
-	dep ensure
-
-update:
-	dep ensure -update
-
 fclean:
 	go clean
 	rm -fr bin/${NAME}
 
-test:
-	go test github.com/teintuc/chromecast-cli/...
-
-.PHONY: fmt vendor update test
+.PHONY: fmt
